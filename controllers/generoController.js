@@ -1,5 +1,3 @@
-
-
 const db =require('../database/models');
 
 module.exports = {
@@ -20,16 +18,16 @@ module.exports = {
             })
     },
 
-    create: function(req, res) {
+    create: function(req,res) {
         db.Genre.create( {
-            tittle: req.body.title,
-            rating: req.body.rating,
-            awards: req.body.awards,
-            release_date: req.body.release_date,
-            length: req.body.length
-    })
-
-    .then(function(lapapa) {
-        return res.status(201).json(lapapa)
-    })
-}}
+            name: req.body.name,
+            ranking: req.body.ranking,
+            active: req.body.active
+        })
+            
+        .then(function(lapapa) {
+            return res.status(201).json(lapapa)
+         })
+    }
+    
+};

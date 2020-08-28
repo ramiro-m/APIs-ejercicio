@@ -7,6 +7,7 @@ module.exports = function(sequelize, dataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
+        
         name: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -29,5 +30,6 @@ module.exports = function(sequelize, dataTypes) {
     }
 
     let Genre = sequelize.define(alias, cols, config);
+
     return Genre;
 }

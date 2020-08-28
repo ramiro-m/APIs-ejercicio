@@ -31,8 +31,10 @@ module.exports = function(sequelize, dataTypes) {
         }
     };
     let config = {
-        timestamps: true,
+        tableName : "movies",
+        timestamps: false,
         underscored: true
+        
     }
 
     let Movie = sequelize.define(alias, cols, config);
